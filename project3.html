@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.loginpage{
+    width: 33%;
+    height: 80vh;
+    margin: 5% 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: rgb(158, 199, 184);
+    border-radius: 10px;
+}
+.loginpage .logsign{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
+.loginpage .logsign .sign{
+    border: none;
+}
+.loginpage .logsign .log{
+    border: none;
+    border-bottom: 2px solid green;
+    box-shadow: 0px 2px 0px 0px;
+    color: green;
+}
+.loginpage form{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+.loginpage form .name{
+    width: 100%;
+    line-height: 300%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.loginpage form .pswd{
+    width: 100%;
+    line-height: 300%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.loginpage form .remforgot{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    
+}
+.remforgot {
+    width: 55%;
+    font-size: 13px;
+    color: rgb(66, 64, 64);
+}
+.loginpage .dont{
+    width: 100%;
+    line-height: 300%;
+    display: flex;
+    justify-content: center;
+    color: rgb(75, 74, 74);
+    gap: 10px;
+}
+.dont .signup{
+    color: rgb(2, 110, 2);
+}
+
+ input{
+    width: 100%;
+    padding: 2% 0%;
+    padding-left: 10px;
+
+}
+.cb{
+    width: 12%;
+}
+.loginpage .logincl{
+    width: 100%;
+}
+.loginpage .logincl .login{
+    width: 100%;
+    padding: 1% 20%;
+    background-color: blue;
+    color: white;
+    outline: 0px;
+    border: none;
+}
+@media screen and (max-width:798px) {
+    .loginpage form .remforgot{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
+        gap: 5px;
+        
+    }
+    .remforgot {
+        width: 100%;
+        font-size: 13px;
+        color: rgb(66, 64, 64);
+    }
+    .loginpage .dont{
+        width: 100%;
+        line-height: 300%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(75, 74, 74);
+        gap: 5px;
+    }
+}
+
+
+
+.signuppage{
+    width: 33%;
+    height: 80vh;
+    margin: 5% 33%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: rgb(187, 31, 31);
+    border-radius: 10px;
+}
+.signuppage .logsign{
+    width: 100%;
+    line-height: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
+.signuppage .logsign .log{
+    border: none;
+}
+.signuppage .logsign .sign{
+    border: none;
+    box-sizing: border-box;
+    padding: 13px 0px;
+    border-bottom: 2px solid green;
+    box-shadow: 0px 2px 0px 0px;
+    color: green;
+}
+.signuppage form{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 10px;
+
+}
+.signuppage form .name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.signuppage form .pswd{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.signuppage form .emailid{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.signuppage form .contactno{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+input{
+    width: 100%;
+    padding: 2% 0%;
+    padding-left: 10px;
+
+}
+.btn{  
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    
+}
+.btn button{
+    width: 100%;
+    padding: 1% 15%;
+}
+.btn button:hover{
+    background-color: blue;
+}
+@media screen and (max-width:798px){
+    .btn{  
+        width: 100%;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        
+    }
+    .btn button{
+        width: 94%; 
+        padding: 1% 17%;
+    }
+    .signuppage form{
+        box-sizing: border-box;
+        padding-top: 20px;
+    }
+}
+.nav{
+            width: 100%;
+            background-color: rgb(248, 236, 236);
+            height: 12vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-style: italic;
+
+        }
+           .logo{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            padding-right: 170px;
+            font-size: 20px;
+            padding-bottom: 5px;
+            animation: demo 5s infinite;
+           color: darkblue;
+            
+        }
+        
+        
+            
+        .menu{
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        .hm:hover{
+            color:orange;
+            animation: zoom 5s infinite;
+            
+        }
+        @keyframes zoom{
+            0%{
+                transform: scale(1.3);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .prt:hover:hover{
+            color: orange;
+            animation: zoom 5s infinite;
+        }
+        @keyframes zoom{
+            0%{
+                transform: scale(1.3);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .prj:hover{
+            color: orange;
+            animation: zoom 5s infinite;
+        }
+        @keyframes zoom{
+            0%{
+                transform: scale(1.3);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .abt:hover{
+            color: orange;
+            animation: zoom 5s infinite;
+        }
+        @keyframes zoom{
+            0%{
+                transform: scale(1.3);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        .cnt:hover{
+            color: orange;
+            animation: zoom 5s infinite;
+            
+        }
+        @keyframes zoom{
+            0%{
+                transform: scale(1.3);
+            }
+            50%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="hemepage">
+        <nav class="nav">
+            <div class="logo"><i class="fa-solid fa-camera">&nbsp;Q.C<br><p style="font-size: 15px; font-style: italic;">photography</p></i></div>
+            <div class="menu">
+                <div class="hm"><p class="hm"><i class="fa-solid fa-house"></i>&nbsp;<a href="project1.html">Home</a></p></div>
+                <div><p class="prt"><i class="fa-solid fa-image-portrait"></i>&nbsp;<a href="project2.html">Portraits</a></p></div>
+                <div><p class="prj"><i class="fa-solid fa-image"></i>&nbsp;<a href="project5.html">commissions</a></p></div>
+                <div><p class="abt"><i class="fa-solid fa-circle-user"></i>&nbsp;<a href="project4.html">About us</a></p></div>
+                <div><p class="cnt"><i class="fa-solid fa-address-card"></i>&nbsp;<a href="project3.html">contact</a></p></div>
+            </div>
+            
+    
+        </nav>
+        </div>
+    <!-- login page start -->
+    <div style="padding-left: 400px;"><h1>C O N T A C T</h1></div>
+
+
+    <div class="loginpage" >
+        <div class="logsign">
+            <div class="log" >Log in</div>
+            <div class="sign" onclick="sign()">Sign Up</div>
+        </div>
+        <form>
+            <div class="name">
+                <div class="fname">Full Name</div>
+                <input type="text" placeholder="Enter your user name" id="logname"/>
+            </div>
+            <div class="pswd">
+                <div class="password">Password</div>
+                <input type="password" placeholder="Enter your Password" id="logpswd"/>
+                
+            </div>
+            <div class="remforgot">
+                <label><input type="checkbox" class="cb">Remember me</label>
+                <div class="forget">Forgot Password ?</div>
+            </div>
+            <div class="logincl"><button onclick="done()" class="login">LOGIN</button></div>
+            <div class="dont">
+                <div class="account">Don't have an Account ?</div>
+                <div class="signup" onclick="sign()">SIGN UP</div>
+            </div>
+        </form>
+        
+    </div>
+
+
+    <!-- login page end -->
+
+
+    <!-- sign up page start -->
+
+
+    <div class="signuppage">
+        <div class="logsign">
+            <div class="log" onclick="log()">Log in</div>
+            <div class="sign" >Sign Up</div>
+        </div>
+        <form>
+            <div class="name">
+                <div class="fname">Full Name</div>
+                <input type="text" placeholder="Enter your user name" id="fullname"/>
+            </div>
+            <div class="emailid">
+                <div class="email">Email</div>
+                <input type="email" placeholder="Enter your email here"/>
+            </div>
+            <div class="pswd">
+                <div class="password">Password</div>
+                <input type="password" placeholder="Enter your Password" id="password"/>
+            </div>
+            <div class="contactno">
+                <div class="contact">Contact</div>
+                <input type="text" placeholder="Enter Contact Number"/>
+            </div>
+            <div class="btn">
+                <button class="back">Back</button>
+                <button class="save" onclick="save()">SAVE_&_VERIFY</button>
+            </div> 
+        </form>
+           
+        
+    </div>
+    <div style="padding-left: 420px;"><h3>GENERAL ENQUIRIES</h3></div>
+    <br>
+    <div style="padding-left:440px ;">info@mysite.com
+        <br>
+
+        123-456-7890</div>
+        <br>
+        <div style="padding-left: 460px; font-size: 30px;"><i class="fa-brands fa-square-instagram fa-bounce" style="color: #da497c;"></i>&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-twitter fa-bounce" style="color: #0154e4;"></i></div>
+
+    
+    <!-- sign up page end -->
+    <div style="font-style: italic; padding-left: 283px;"><i class="fa-regular fa-copyright"></i>&nbsp;2035 by Quality Clicks.powered and secured by <a href="https://www.wix.com/website/templates/?criteria=Photography+Studio" class="a">wix</a></div>
+            
+
+    <script>
+    let loginpage=document.getElementsByClassName("loginpage")
+let login=document.getElementsByClassName("log")
+let signuppage=document.getElementsByClassName("signuppage")
+let signin=document.getElementsByClassName("sign")
+
+let log=()=>{
+    loginpage[0].style.display="flex"
+    signuppage[0].style.display="flex"
+    login[0].style.color="green"
+    signin[0].style.color="black"
+
+}
+
+let sign=()=>{
+    loginpage[0].style.display="none"
+    signuppage[0].style.display="flex"
+    signin[0].style.color="green"
+    login[0].style.color="black"   
+}
+
+let save=()=>{
+    let name=document.getElementById("fullname").value
+    let pswd=document.getElementById("password").value
+    localStorage.setItem("name",name)
+    localStorage.setItem("pswd",pswd)
+}
+
+let done=()=>{
+    let lname=document.getElementById("logname").value
+    let lpswd=document.getElementById("logpswd").value
+    if(lname==localStorage.getItem("name") && lpswd==localStorage.getItem("pswd"))
+    {
+        alert("LOGIN SUCESSFULLY DONE")
+    }
+    else
+    {
+        alert("NO DATA FOUND WITH THIS NAME..!! YOU CAN SIGNUP ")
+    }
+}
+    </script>
+</body>
+</html>
